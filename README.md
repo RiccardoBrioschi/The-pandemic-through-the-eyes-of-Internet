@@ -1,4 +1,4 @@
-# # TITLE
+# TITLE
 This is the repo for the project of the course Applied Data Analysis at EPFL [(CS-401)](https://dlab.epfl.ch/teaching/fall2022/cs401/).
 
 ## Team:
