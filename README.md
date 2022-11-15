@@ -32,22 +32,22 @@ In this section, we will give an overview of the preprocessing, processing, and 
 * Analysing it - EXPLAIN how
 * Why is this feasible
 
-We want to analyze which were the most discussed topics on Twitter during the pandemic, in order to verify whether users’ behavior has been similar between Wikipedia and the social network. Since we are interested in comparing the data from Twitter with the results obtained by West et al., there is no need to adopt a difference-in-difference methodology but it is enough to compute the frequency with which the topics of the ORES article topic were mentioned in different tweets. For what regards COVID-19-related tweets, it might be interesting to compare their daily or weekly distribution with the daily or weekly distribution of deaths in each country (WHO dataset), in order to see whether a higher number of posts about the virus might be a symptom of the gradual worsening of the situation.  
+*We want to analyze which were the most discussed topics on Twitter during the pandemic, in order to verify whether users’ behavior has been similar between Wikipedia and the social network. Since we are interested in comparing the data from Twitter with the results obtained by West et al., there is no need to adopt a difference-in-difference methodology but it is enough to compute the frequency with which the topics of the ORES article topic were mentioned in different tweets. For what regards COVID-19-related tweets, it might be interesting to compare their daily or weekly distribution with the daily or weekly distribution of deaths in each country (WHO dataset), in order to see whether a higher number of posts about the virus might be a symptom of the gradual worsening of the situation.*  
  
-We import tweets for each one of the 12 countries using Twitter API. Tweets may be retrieved on a daily or weekly basis at particular times of the day (moments of major usage of the platform). In order to label each tweet with a topic, we use ........................... which performs well with a wide variety of languages. To compare Twitter results with Wikipedia pageviews, various data visualization techniques may be adopted.
+*We import tweets for each one of the 12 countries using Twitter API. Tweets may be retrieved on a daily or weekly basis at particular times of the day (moments of major usage of the platform). In order to label each tweet with a topic, we use ........................... which performs well with a wide variety of languages. To compare Twitter results with Wikipedia pageviews, various data visualization techniques may be adopted.*
 
 * Collecting tweets of influential users from different countries
 * Analysing it - EXPLAIN how
 * Why is this feasibile
 
-We retrieve tweets posted by influential people in each country (politicians, influencers, public figures from music, sports, etc.) and we perform a sentiment analysis of these posts using Google API. We compute both a sentiment score and a magnitude value for each comment. The latter, which refers to the semantic power of the words appearing in the tweet, might also be useful to understand the way communication has changed during the pandemic and which were the most used words.  
+*We retrieve tweets posted by influential people in each country (politicians, influencers, public figures from music, sports, etc.) and we perform a sentiment analysis of these posts using Google API. We compute both a sentiment score and a magnitude value for each comment. The latter, which refers to the semantic power of the words appearing in the tweet, might also be useful to understand the way communication has changed during the pandemic and which were the most used words.  
 
-We retrieved a sufficient amount of tweets published by 10 influential people in each country. The nature of the posts can be of different kinds (Covid, Vaccination, etc)  and the posting dates should be uniformly distributed throughout the pandemic period. We then analyze the time series of the obtained sentiment values with mobility data and deaths data (WHO Dataset)
+We retrieved a sufficient amount of tweets published by 10 influential people in each country. The nature of the posts can be of different kinds (Covid, Vaccination, etc)  and the posting dates should be uniformly distributed throughout the pandemic period. We then analyze the time series of the obtained sentiment values with mobility data and deaths data (WHO Dataset)*
 
 * Causality among mobility and tweets from influential users - EXPLAIN how
 * Why is this feasibile
 
-We can finally observe whether famous people influenced people’s mobility (using panicking words, warnings etc) before and after official limitations were published and see if stronger words were used in countries having the strongest lockdown.  
+*We can finally observe whether famous people influenced people’s mobility (using panicking words, warnings etc) before and after official limitations were published and see if stronger words were used in countries having the strongest lockdown.*
 
 
 ```mermaid
@@ -79,7 +79,7 @@ C --> D
 |Task 2      |M, L                          |
 |Task 2      |R, M, L, F                    |
 
-* M = Maja, F = Federico, L = Lazar, R = Riccardo
+*M = Maja, F = Federico, L = Lazar, R = Riccardo
 
 
 ## Authors
