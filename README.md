@@ -24,7 +24,8 @@ Starting from West et al.’s work about attention shifts on Wikipedia during th
 ## Datasets:
 To answer those questions we used the following datasets (given):
 - `Global_Mobility_Report`: in this dataset are collected all the metrics regarding mobility.
-- `interventions`: in this dataset we can find all the date of the most important events during the pandemics for some countries.
+- `aggregated_timeseries`: here we find the date and the number of clicks on wikipedia pages of different topics (e.g. Covid, Geography, STEM, ...)
+- `interventions`: in this dataset we can find all the date of the most important events during the pandemics for some countries.  
 We have also decided to add the following dataset to have a better understanding in our analysis on how pandemics was going:
 - `WHO-COVID-19-global-data`: dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data)
 
