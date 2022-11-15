@@ -37,7 +37,25 @@ To answer those questions we used the following datasets:
 
 **RQ3**: We can finally observe whether famous people influenced people’s mobility (using panicking words, warnings etc) before and after official limitations were published and see if stronger words were used in countries having the strongest lockdown.  
 
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
 ## Proposed timeline:
+
+
+|Period                         |Tasks                        |
+|-------------------------------|-----------------------------|
+|`November 21st - November 27th ` |TBD                          |
+|`November 28st - December 04th ` |TBD                          |
+|`December 05th - December 11th ` |TBD                          |
+|`December 12th - December 18th ` |TBD                          |
+|`December 19th - December 23th ` |TBD                          |
 
 
 ## Organization within the team:
