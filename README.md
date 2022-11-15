@@ -1,41 +1,53 @@
-# TITLE
+# People's thoughts expressed in online world during the coronavirus pandemic 
 This is the repo for the project of the course Applied Data Analysis at EPFL [(CS-401)](https://dlab.epfl.ch/teaching/fall2022/cs401/).
 
-## Team
-The `4ADA` team is composed by:
-- Riccardo Brioschi: [@RiccardoBrioschi](https://github.com/RiccardoBrioschi)  
-- Federico Di Gennaro: [@FedericoDiGennaro](https://github.com/FedericoDiGennaro)  
-- Lazar Milikić: [@LazarMilikic](https://github.com/Lemmy00) <br/>
-- Maja Skoko: [@MajaSkoko](https://github.com/s-maja)
-
 ## Abstract
-2020 was a year of big changes in the world. During the coronavirus pandemic, more than 4M people were infected and more than 15K people died. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Wikipedia also had a big role during that period as the main source for investigating more about viruses, and previous pandemics, but also about different topics for which earlier they didn't have enough free time to explore.
-The goal of this project is to use human digital traces to understand how the pandemic has impacted human needs and interests.
+Thanks to the coronavirus pandemic year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. 
+
+Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis, this project aims to analyse human digital traces and to understand how the pandemic has impacted human thoughts and interests. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we want an answer on how interest in some topics was affected by influencing people on Twitter. And finally, to wrap up the story, we want to see did influencing people on Twitter had an impact on people's mobility before official lockdowns.
 
 ## Research questions
-Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis, we want to retrieve additional information from Twitter in order to answer the following questions:
 
-1) How have people's interests in different topics on Wikipedia and Twitter changed during different periods of the pandemic in different countries? Is there any correlation between these two? Do tweets reflect the same changes in volume and nature of information seeking as shown by Wikipedia pageview logs? Do COVID-19-related tweets have a distribution similar to one of Wikipedia pages, with peaks and sudden increases around mobility changepoints?
+To figure out how people's thoughts and interests changed in response both to the disease itself and to the massive mobility restrictions during pandemic, we ask following questions:
 
-2) Did influential people post more negative or positive messages using Twitter? Did this reflect the situation going on in each country (e.g., regarding the topics searched, interests in COVID, respecting governments' lockdown measures, and general mobility)?
+1) How people's interest in different topics on Wikipedia and Twitter changed during different periods of the pandemic in different countries? Is there any correlation between these two? Do tweets reflect the same changes in volume and nature of information seeking as shown by Wikipedia pageview logs? Do COVID-19-related tweets have a distribution similar to one of Wikipedia pages, with peaks and sudden increases around mobility changepoints?
 
-3) Did countries with a higher presence of COVID on tweeter and interest before the lockdowns (or if no official lockdowns in the country, we could detect the points of high-reduction of mobility, a kind of alternate normalcy feature from Coronawiki) have a better COVID situation than countries that didn’t?
+2) How has the behavior of influential people on Twitter changed during pandemic and has it potentially had an impact on people's thinking and interest?
+
+3) Did countries with a higher presence of covid information and warnings on Twitter, mostly from influential people, have a better situation in terms of new cases and the number of deaths, than countries that didn’t?
 
 ## Datasets
 To answer those questions we used the following datasets:
 - `Global_Mobility_Report` (given): in this dataset are collected all the metrics regarding mobility.
 - `aggregated_timeseries` (given): here we find the date and the number of clicks on wikipedia pages of different topics (e.g. Covid, Geography, STEM, ...)
 - `interventions` (given): in this dataset we can find all the date of the most important events during the pandemics for some countries.  
-- `WHO-COVID-19-global-data`(added by us): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding in our analysis on how pandemics was going.
+- `WHO-COVID-19-global-data`(added): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding in our analysis on how pandemics was going.
+- `Twitter data` (added): we are collecting tweets (both from influencing people and normal daily users) in different periods of the pandemic to get answers on mentioned RQ
 
 ## Methods
-**RQ1**: We want to analyze which were the most discussed topics on Twitter during the pandemic, in order to verify whether users’ behavior has been similar between Wikipedia and the social network. Since we are interested in comparing the data from Twitter with the results obtained by West et al., there is no need to adopt a difference-in-difference methodology but it is enough to compute the frequency with which the topics of the ORES article topic were mentioned in different tweets. For what regards COVID-19-related tweets, it might be interesting to compare their daily or weekly distribution with the daily or weekly distribution of deaths in each country (WHO dataset), in order to see whether a higher number of posts about the virus might be a symptom of the gradual worsening of the situation.  
-**Methodology 1**: We import tweets for each one of the 12 countries using Twitter API. Tweets may be retrieved on a daily or weekly basis at particular times of the day (moments of major usage of the platform). In order to label each tweet with a topic, we use ........................... which performs well with a wide variety of languages. To compare Twitter results with Wikipedia pageviews, various data visualization techniques may be adopted.
 
-**RQ2**: We retrieve tweets posted by influential people in each country (politicians, influencers, public figures from music, sports, etc.) and we perform a sentiment analysis of these posts using Google API. We compute both a sentiment score and a magnitude value for each comment. The latter, which refers to the semantic power of the words appearing in the tweet, might also be useful to understand the way communication has changed during the pandemic and which were the most used words.  
-**Methodology 2**: We retrieved a sufficient amount of tweets published by 10 influential people in each country. The nature of the posts can be of different kinds (Covid, Vaccination, etc)  and the posting dates should be uniformly distributed throughout the pandemic period. We then analyze the time series of the obtained sentiment values with mobility data and deaths data (WHO Dataset)
+In this section, we will give an overview of the preprocessing, processing, and the data analysis part which needs to be done to answer on RQs. Moreover, we will explain the problem-solving process as well as the feasibility of each task.
 
-**RQ3**: We can finally observe whether famous people influenced people’s mobility (using panicking words, warnings etc) before and after official limitations were published and see if stronger words were used in countries having the strongest lockdown.  
+* Collecting tweets of normal daily users
+* Analysing it - EXPLAIN how
+* Why is this feasible
+
+We want to analyze which were the most discussed topics on Twitter during the pandemic, in order to verify whether users’ behavior has been similar between Wikipedia and the social network. Since we are interested in comparing the data from Twitter with the results obtained by West et al., there is no need to adopt a difference-in-difference methodology but it is enough to compute the frequency with which the topics of the ORES article topic were mentioned in different tweets. For what regards COVID-19-related tweets, it might be interesting to compare their daily or weekly distribution with the daily or weekly distribution of deaths in each country (WHO dataset), in order to see whether a higher number of posts about the virus might be a symptom of the gradual worsening of the situation.  
+ 
+We import tweets for each one of the 12 countries using Twitter API. Tweets may be retrieved on a daily or weekly basis at particular times of the day (moments of major usage of the platform). In order to label each tweet with a topic, we use ........................... which performs well with a wide variety of languages. To compare Twitter results with Wikipedia pageviews, various data visualization techniques may be adopted.
+
+* Collecting tweets of influential users from different countries
+* Analysing it - EXPLAIN how
+* Why is this feasibile
+
+We retrieve tweets posted by influential people in each country (politicians, influencers, public figures from music, sports, etc.) and we perform a sentiment analysis of these posts using Google API. We compute both a sentiment score and a magnitude value for each comment. The latter, which refers to the semantic power of the words appearing in the tweet, might also be useful to understand the way communication has changed during the pandemic and which were the most used words.  
+
+We retrieved a sufficient amount of tweets published by 10 influential people in each country. The nature of the posts can be of different kinds (Covid, Vaccination, etc)  and the posting dates should be uniformly distributed throughout the pandemic period. We then analyze the time series of the obtained sentiment values with mobility data and deaths data (WHO Dataset)
+
+* Causality among mobility and tweets from influential users - EXPLAIN how
+* Why is this feasibile
+
+We can finally observe whether famous people influenced people’s mobility (using panicking words, warnings etc) before and after official limitations were published and see if stronger words were used in countries having the strongest lockdown.  
 
 
 ```mermaid
@@ -55,13 +67,29 @@ C --> D
 |`November 28st - December 04th ` |TBD                          |
 |`December 05th - December 11th ` |TBD                          |
 |`December 12th - December 18th ` |TBD                          |
-|`December 19th - December 23th ` |TBD                          |
+|`December 19th - December 23th ` |Data story                   |
 
 
 ## Organization within the team
-- [@RiccardoBrioschi](https://github.com/RiccardoBrioschi):   
-- [@FedericoDiGennaro](https://github.com/FedericoDiGennaro):  
-- [@LazarMilikic](https://github.com/Lemmy00):  
-- [@MajaSkoko](https://github.com/s-maja):  
+
+
+|Task        |Responsibility *             |
+|------------|-----------------------------|
+|Task 1      |R, F                          |
+|Task 2      |M, L                          |
+|Task 2      |R, M, L, F                    |
+
+* M = Maja, F = Federico, L = Lazar, R = Riccardo
+
+
+## Authors
+
+The `4ADA` team is composed by:
+- Riccardo Brioschi: [@RiccardoBrioschi](https://github.com/RiccardoBrioschi)  
+- Federico Di Gennaro: [@FedericoDiGennaro](https://github.com/FedericoDiGennaro)  
+- Lazar Milikić: [@LazarMilikic](https://github.com/Lemmy00) <br/>
+- Maja Skoko: [@MajaSkoko](https://github.com/s-maja)
 
 ## References
+
+West R. et al.,  "Sudden Attention Shifts on Wikipedia During the COVID-19 Crisis", 2020 https://arxiv.org/pdf/2005.08505.pdf 
