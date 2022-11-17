@@ -46,12 +46,21 @@ In this section, we will give an overview of the preprocessing, processing, and 
 *We can finally observe whether famous people influenced people’s mobility (using panicking words, warnings etc) before and after official limitations were published and see if stronger words were used in countries having the strongest lockdown.*
 
 
+
 ```mermaid
 graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+B((GDP)) -- Link text --> A((Propensity score))
+C((HDI)) --> A
+D((Mobility)) --> A
+E((Lockdown)) --> A
+F((Population)) --> A
+A ---> G((Treatment))
+A --> H((Outcome))
+G -->H
+I((Unobserved covariates)) --> G
+
+style A fill:#aaa,stroke:#555,stroke-width:2px
+style I fill:#9bb,stroke:#999,stroke-width:2px
 ```
 
 ## Proposed timeline
