@@ -1,4 +1,9 @@
-# Importance of *online world* during the coronavirus pandemic 
+<h1>
+    Internet as tool to fight pandemics
+    <p style="font-size:52%; margin-top: 5px">
+        For the first time ever, we have chance to explore what role did the online world had during the pandemic. 
+    </p>
+</h1>
 
 * [Abstract](#Abstract)
 * [Research questions](#Research-questions)
