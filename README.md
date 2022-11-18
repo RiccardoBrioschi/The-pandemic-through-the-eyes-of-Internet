@@ -48,7 +48,7 @@ We try to emulate a sort of observational study dividing each country in the fol
 - controlled: countries not showing particular interest in COVID-19. 
 The actual way to assign a class to each country is better described in the corresponding notebook.
 
-The causal graph below shows explain our analysis:
+The causal graph below shows main idea of our analysis:
 
 
 ```mermaid
@@ -91,8 +91,7 @@ We have license for 60M tweets, which are around 70GB of data which will be spli
 |----------------------------|-----------------------------|
 |Wikipedia usage & tweets from *normal* daily users | R, F |
 |Tweets from influential people                     | M, R |
-|Causality Twitter/Wiki to new cases                | L, M |
-|Mobility & WHO data analysis                       | F    |
+|Causality Twitter/Wiki to new cases                | L, M, F |
 
 *M = Maja, F = Federico, L = Lazar, R = Riccardo
 
