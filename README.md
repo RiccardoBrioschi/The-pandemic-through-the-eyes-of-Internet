@@ -1,9 +1,6 @@
-<h1>
-    Internet as tool to fight pandemics
-    <p style="font-size:52%; margin-top: 5px">
-        For the first time ever, we have chance to explore what role did the online world had during the pandemic. 
-    </p>
-</h1>
+# Internet as tool to fight pandemics
+For the first time ever, we have chance to explore what role did the online world had during the pandemic. 
+
 
 * [Abstract](#Abstract)
 * [Research questions](#Research-questions)
