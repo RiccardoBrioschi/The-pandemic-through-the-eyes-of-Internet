@@ -54,14 +54,15 @@ The causal graph below shows explain our analysis:
 ```mermaid
 graph LR
 B((GDP)) -- Link text --> A((Propensity score))
-C((HDI)) --> A
-D((Mobility Data)) --> A
+C((Area)) --> A
+D((Mobility)) --> A
 E((Lockdown)) --> A
 F((Population)) --> A
+N((Twitter Data)) --> A
 A ---> G((Treatment))
 A --> H((Outcome))
 G -->H
-I((Unobserved covariates(English Wikidata,people's panic)) --> G
+I((Unobserved covariates <br/>  - English Wikipedia <br/> - people's panic) --> G
 
 style A fill:#aaa,stroke:#555,stroke-width:2px
 style I fill:#9bb,stroke:#999,stroke-width:2px
