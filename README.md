@@ -3,14 +3,14 @@ This is the repo for the project of the course Applied Data Analysis at EPFL [(C
 
 ## Outline
 
-[Abstract](#Abstract)
-[Research questions](#Research-questions)
-[Datasets](#Datasets)
-[Methods](#Methods)
-[Proposed timeline](#Proposed-timeline)
-[Organization within the team](#Organization-within-the-team)
-[Authors](#Authors)
-[References](#References)
+* [Abstract](#Abstract)
+* [Research questions](#Research-questions)
+* [Datasets](#Datasets)
+* [Methods](#Methods)
+* [Proposed timeline](#Proposed-timeline)
+* [Organization within the team](#Organization-within-the-team)
+* [Authors](#Authors)
+* [References](#References)
 
 ## Abstract
 Due to the coronavirus pandemic, year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. 
