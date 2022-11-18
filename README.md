@@ -23,6 +23,7 @@ To answer those questions we used the following datasets:
 - `interventions` (given): in this dataset we can find all the date of the most important events during the pandemics for some countries.  
 - `WHO-COVID-19-global-data`(added): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding in our analysis on how pandemics was going.
 - `Twitter data` (added): we are collecting tweets (both from influencing people and normal daily users) in different periods of the pandemic to get answers on mentioned RQs.
+- `countries.csv` (added): dataset containing additional information about analysed countries, e.g. area, GDP, population etc.
 
 ## Methods
 
@@ -40,21 +41,27 @@ In this part of analysis, we are retrieving tweets posted by influential people 
 
 ####  Causality among covid related topics on Wiki and Twitter and covid new cases/deaths
 
-Finally, we want to observe whether tweets of influencing people had an impact on pandemic situation in country obersving different covariates such as mobility data,... after official limitations were published.
+We want to explore whether an overall interest in COVID-19 had impact on reducing/slowing number of new cases and deaths in different countries. By overall interest we mean number of COVID-related pageviews on Wikipedia (which represent people's generla interest in the pandemic) and Twitter data of influential people (which represent the presence of the virus in social media).
 
-Explan...
+We try to emulate a sort of observational study dividing each country in the following classes:
+- treated: countries which proved to pay attention to COVID in the early stage of the pandemic;
+- controlled: countries not showing particular interest in COVID-19. 
+The actual way to assign a class to each country is better described in the corresponding notebook.
+
+The causal graph below shows explain our analysis:
+
 
 ```mermaid
 graph LR
 B((GDP)) -- Link text --> A((Propensity score))
 C((HDI)) --> A
-D((Mobility)) --> A
+D((Mobility Data)) --> A
 E((Lockdown)) --> A
 F((Population)) --> A
 A ---> G((Treatment))
 A --> H((Outcome))
 G -->H
-I((Unobserved covariates)) --> G
+I((Unobserved covariates(English Wikidata,people's panic)) --> G
 
 style A fill:#aaa,stroke:#555,stroke-width:2px
 style I fill:#9bb,stroke:#999,stroke-width:2px
