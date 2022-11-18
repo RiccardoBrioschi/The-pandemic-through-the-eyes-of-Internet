@@ -12,7 +12,7 @@ To figure out how people's interests changed in response both to the disease its
 
 1) How people's interest in different topics on Wikipedia and Twitter changed in the early stage of the pandemic in different countries? Do tweets reflect the same changes in nature of information seeking as shown by Wikipedia pageview logs?
 
-2) What was the behavior of influential people on Twitter during pandemic, and how they impacted people's mobility during that period, with particular attention to the early stage of pandemic?
+2) What was the behavior of influential people on Twitter during pandemic, and how their words impacted people during that period, with particular attention to the early stage of pandemic?
 
 3) Did countries with a higher presence of covid related topics on Wikipedia and a higher presence of tweets about covid, mostly from influential people, have a better situation in terms of new cases and the number of deaths, than countries that didn’t?
 
@@ -70,8 +70,7 @@ style I fill:#9bb,stroke:#999,stroke-width:2px
 
 #### Feasibility
 
-We have licence for 60M tweets, which are around 2GB of data which is apropriate amount of data for our machines with 16GB of RAM memory. 
-We are using models... explain why we are safe to use them.
+We have license for 60M tweets, which are around 70GB of data which will be split into 2 datasets (influential and normal people). This however is the maximum amount of data we can retrieve, but we strongly believe less tweets will be needed to draw useful insights.
 
 ## Proposed timeline
 
@@ -80,7 +79,7 @@ We are using models... explain why we are safe to use them.
 |---------------------------------|----------------------------------------|
 |`November 21st - November 27th ` | Twitter data retrieval & answering RQ1 |
 |`November 28st - December 04th ` | Answering RQ2                          |
-|`December 05th - December 11th ` | Focusing on RQ3                        |
+|`December 05th - December 11th ` | Answering RQ3                          |
 |`December 12th - December 18th ` | Overall conslusion & Data story        |
 |`December 19th - December 23th ` | Final checks and revisions             |
 
