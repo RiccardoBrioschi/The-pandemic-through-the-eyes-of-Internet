@@ -4,15 +4,15 @@ This is the repo for the project of the course Applied Data Analysis at EPFL [(C
 ## Abstract
 Due to the coronavirus pandemic, year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. 
 
-Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis [[1]](#References), this project aims to analyse human digital traces and to understand how the pandemic has impacted human interests, with particular attention to how communication has been affected by the virus. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we will analyise tweets posted by influential people on the semantic level to see the power of communication during the pandemic. Finally, to wrap up the story, we want to check weather a higher presence of covid related topics, both on Twitter and Wikipedia, had an impact on the number of new cases and deaths based on different observed covariates.
+Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis [[1]](#References), this project aims to analyse human digital traces and to understand how the pandemic has impacted human interests, with particular attention to how communication has been affected by the virus. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we will analyise tweets posted by influential people on the semantic level to see the power of communication during the pandemic. Finally, to wrap up the story, we want to check whether a higher presence of covid related topics, both on Twitter and Wikipedia, had an impact on the number of new cases and deaths based on different observed covariates.
 
 ## Research questions
 
-To figure out how people's interests changed in response both to the disease itself and to the massive mobility restrictions during pandemic, we ask following questions:
+To figure out how people's interests changed in response both to the disease itself and to the massive mobility restrictions during the pandemic, we ask the following questions:
 
 1) How people's interest in different topics on Wikipedia and Twitter changed in the early stage of the pandemic in different countries? Do tweets reflect the same changes in nature of information seeking as shown by Wikipedia pageview logs?
 
-2) What was the behavior of influential people on Twitter during pandemic, and how their words impacted people during that period, with particular attention to the early stage of pandemic?
+2) What was the behavior of influential people on Twitter during the pandemic, and how their words impacted people during that period, with particular attention to the early stage of the pandemic?
 
 3) Did countries with a higher presence of covid related topics on Wikipedia and a higher presence of tweets about covid, mostly from influential people, have a better situation in terms of new cases and the number of deaths, than countries that didn’t?
 
