@@ -53,7 +53,7 @@ The causal graph below shows explain our analysis:
 
 ```mermaid
 graph LR
-B((GDP)) -- Link text --> A((Propensity score))
+B((GDP)) --> A((Propensity score))
 C((Area)) --> A
 D((Mobility)) --> A
 E((Lockdown)) --> A
@@ -70,7 +70,7 @@ style I fill:#9bb,stroke:#999,stroke-width:2px
 
 #### Feasibility
 
-We have licence for 60M tweets, it is around 2GB of data which is apropriate amount of data for our machines with 16GB of RAM memory. 
+We have licence for 60M tweets, which are around 2GB of data which is apropriate amount of data for our machines with 16GB of RAM memory. 
 We are using models... explain why we are safe to use them.
 
 ## Proposed timeline
