@@ -62,7 +62,7 @@ N((Twitter Data)) --> A
 A ---> G((Treatment))
 A --> H((Outcome))
 G -->H
-I((Unobserved covariates <br/>  - English Wikipedia <br/> - people's panic) --> G
+I((Unobserved covariates <br/>  - English Wikipedia <br/> - people's panic))--> G
 
 style A fill:#aaa,stroke:#555,stroke-width:2px
 style I fill:#9bb,stroke:#999,stroke-width:2px
