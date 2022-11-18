@@ -58,7 +58,6 @@ C((Area)) --> A
 D((Mobility)) --> A
 E((Lockdown)) --> A
 F((Population)) --> A
-N((Twitter Data)) --> A
 A ---> G((Treatment))
 A --> H((Outcome))
 G -->H
