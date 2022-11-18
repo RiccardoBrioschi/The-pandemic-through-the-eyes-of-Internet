@@ -106,7 +106,7 @@ We have license for 60M tweets, which are around 70GB of data which will be spli
 
 ## Authors
 
-The `4ADA` team is composed by:
+The `4ADA` team is composed of:
 - Riccardo Brioschi: [@RiccardoBrioschi](https://github.com/RiccardoBrioschi)  
 - Federico Di Gennaro: [@FedericoDiGennaro](https://github.com/FedericoDiGennaro)  
 - Lazar Milikić: [@LazarMilikic](https://github.com/Lemmy00) <br/>
