@@ -1,6 +1,17 @@
 # Importance of *online world* during the coronavirus pandemic 
 This is the repo for the project of the course Applied Data Analysis at EPFL [(CS-401)](https://dlab.epfl.ch/teaching/fall2022/cs401/).
 
+## Outline
+
+[Abstract](#Abstract)
+[Research questions](#Research-questions)
+[Datasets](#Datasets)
+[Methods](#Methods)
+[Proposed timeline](#Proposed-timeline)
+[Organization within the team](#Organization-within-the-team)
+[Authors](#Authors)
+[References](#References)
+
 ## Abstract
 Due to the coronavirus pandemic, year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. 
 
@@ -46,6 +57,7 @@ We want to explore whether an overall interest in COVID-19 had an impact on redu
 We try to emulate a sort of observational study dividing each country in the following classes:
 - treated: countries that proved to pay attention to COVID in the early stage of the pandemic;
 - controlled: countries not showing particular interest in COVID-19. 
+
 The actual way to assign a class to each country is better described in the corresponding notebook.
 
 The causal graph below shows the main idea of our analysis:
