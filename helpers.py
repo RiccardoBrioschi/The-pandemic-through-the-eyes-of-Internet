@@ -1,12 +1,14 @@
 " Some helper functions"
 
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from empath import Empath
 lexicon = Empath()
+
+import re
+
 
 # Task 1 functions 
 
