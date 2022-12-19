@@ -113,6 +113,25 @@ def get_dataframe(name_country):
     
 # Task 2 functions
 
+def getTwitterUsers(client, usernames):
+    """
+    Function which retrieving users from 
+    Twitter based on usernames
+    
+    Arguments:
+        client : Twitter API v2 Client
+        usernames : list of account usernames
+    
+    Returns:
+        users: list of users - id, name, username
+    """
+    
+    users = []
+    for username in usernames:
+        users.append(client.get_user(username=username))
+    return users
+
+
 def remove_emojis(data):
     """
     Function which removing emojis from tweet's text
