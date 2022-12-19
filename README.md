@@ -14,13 +14,14 @@ For the first time ever, we have a chance to explore what role the online world 
 ## Abstract
 Due to the coronavirus pandemic, year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. 
 
-Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis [[1]](#References), this project aims to analyse human digital traces and to understand how the pandemic has impacted human interests, with particular attention to how communication has been affected by the virus. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we will analyise tweets posted by influential people on the semantic level to see the power of communication during the pandemic. Finally, to wrap up the story, we want to check whether a higher presence of covid related topics, both on Twitter and Wikipedia, had an impact on the number of new cases and deaths based on different observed covariates.
+Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis [[1]](#References), this project aims to analyse human digital traces and to understand how the pandemic has impacted human interests, with particular attention to how communication has been affected by the virus. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we will analyise tweets posted by influential people on the semantic level to see the power of communication during the pandemic. Finally, to wrap up the story, the main question of our research is:  
+“Were countries which paid more attention about COVID-19 in the early stage of the pandemic the ones that better handled the initial spread of the virus?”
 
 ## Research questions
 
 To figure out how people's interests changed in response both to the disease itself and to the massive mobility restrictions during the pandemic, we ask the following questions:
 
-1) How people's interest in different topics on Wikipedia and Twitter changed in the early stage of the pandemic in different countries? Do tweets reflect the same changes in nature of information seeking as shown by Wikipedia pageview logs?
+1) How people's interest in different topics on Wikipedia and Twitter changed in the early stage of the pandemic in different countries? Do tweets reflect the same changes in nature of information seeking as shown by Wikipedia pageview logs and if not, why?
 
 2) What was the behavior of influential people on Twitter during the pandemic, and how their words impacted people during that period, with particular attention to the early stage of the pandemic?
 
@@ -28,70 +29,42 @@ To figure out how people's interests changed in response both to the disease its
 
 ## Datasets
 To answer those questions we used the following datasets:
-- `Global_Mobility_Report` (given): in this dataset are collected all the metrics regarding mobility.
-- `aggregated_timeseries` (given): here we find the date and the number of clicks on wikipedia pages of different topics (e.g. Covid, Geography, STEM, ...)
-- `interventions` (given): in this dataset we can find all the date of the most important events during the pandemics for some countries.  
-- `WHO-COVID-19-global-data`(added): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding in our analysis on how pandemics was going.
-- `Twitter data` (added): we are collecting tweets (both from influencing people and normal daily users) in different periods of the pandemic to get answers on mentioned RQs.
-- `countries.csv` (added): dataset containing additional information about analysed countries, e.g. area, GDP, population etc.
+- `Global_Mobility_Report` (given to us): in this dataset are collected all the metrics regarding mobility.
+- `aggregated_timeseries` (given to us): here we find the date and the number of clicks on wikipedia pages of different topics (e.g. Covid, Geography, STEM, ...)
+- `interventions` (given to us): in this dataset we can find all the date of the most important events during the pandemics for some countries.  
+- `WHO-COVID-19-global-data`(added by us): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding in our analysis on how pandemics was going.
+- `Twitter data` (added by us): we collected tweets (both from influencing people and normal daily users) in different periods of the pandemic to get answers on mentioned RQs.
+- `countries.csv` (added by us): dataset containing additional information about analysed countries, e.g. area, GDP, population etc.
 
 ## Methods
 
 In this section, we will give an overview of the preprocessing, processing, and the data analysis part which needs to be done to answer on RQs. Moreover, we will explain the problem-solving process as well as the feasibility of each task.
 
-#### Analysis of Wikipedia usage and tweets from *normal* daily users  
+#### Analysis of Wikipedia usage and tweets from *normal* daily users. 
 
-We want to analyse which were the most discussed topics on Twitter in the early stage of the pandemic, in order to verify whether users’ behavior has been similar between Wikipedia and the social network. Since we are interested in comparing the data from Twitter with the results obtained by West et al.[[1]](#References), there is no need to adopt a difference-in-difference methodology but it is enough to compute the frequency with which the topics of the ORES article topic were mentioned in different tweets. Additionally, this first analysis serves as an introduction to understand which topics have been discussed on Twitter: we want to detect whether the idea of a medical emergency started to arise in the discussed topics in order to identify which countries immediately began to pay attention to the virus.
+We analysed which were the most discussed topics on Twitter in the early stage of the pandemic, in order to verify whether users’ behavior has been similar between Wikipedia and the social network. Since we are interested in comparing the data from Twitter with the results obtained by West et al.[[1]](#References), there is no need to adopt a difference-in-difference methodology but it is enough to compute the frequency with which the topics of the ORES article topic were mentioned in different tweets. Additionally, this first analysis serves as an introduction to understand which topics have been discussed on Twitter: we want to detect whether the idea of a medical emergency started to arise in the discussed topics in order to identify which countries immediately began to pay attention to the virus. Twitter gave us the possibility to also capture the early reactionary behavior of people. We noticed infact that tha Wikipedia page of Covid existed before the actual start of the pandemic but it takes a bit to have a complete page to look at. On the other hand, on Twitter, people started to talk about Covid immediatly when the public attention was shifting to that topic.
  
-For what regards our methodology, for this milestone we imported tweets from two countries (Serbia and Italy, our homelands) and we are currently retrieving data about the remaining countries: our goal is to conduct this analysis on each one of the countries presented in CoronaWiki dataset. We are retrieving tweets posted during the 3 weeks preceding the lockdown in each country because we want to study what was the initial response of the population to the unusual situation. For future purposes, we can expand the analysed period to see how people's behavior has evolved over time. To make our analysis more convenient, we are translating each tweet from its original language to English using Google translator python library. During the process of retrieving tweets, we are avoiding retweets and tweets which contain videos, images, or similar media since for our analysis only text is useful. Tweets are retrieved on a daily basis at particular times of the day (moments of major usage of the platform). In order to label each tweet with a topic and emotions, we use empath library. To compare Twitter results with Wikipedia pageviews, various data visualization techniques may be adopted.
+For what regards our methodology, we firstly retrieved tweets (of "normal people") from the same countries analysed in Coronawiki dataset with the exception of Great Britain for the motivation explained in the description of the dataset you provide us. We retrieved tweets posted during the 3 weeks preceding the lockdown in each country because we want to study what was the initial response of the population to the unusual situation. During the process of retrieving tweets, we are avoiding retweets and tweets which contain videos, images, or similar media since for our analysis only text is useful. Tweets are retrieved on a daily basis at particular times of the day (moments of major usage of the platform). In order to label each tweet with a topic and emotions, we use empath library and we traslated them to English; notice that for some of the topics we chose to analyse it was needed to create our own category in empath. To compare Twitter results with Wikipedia pageviews, we did a min-max scaling separately for both Twitter and Wikipedia data. This plot gave us insights about the trends of topic in the two platforms and we believe that given the fact that they capture different type of behavior it should be great to combine them in our further analysis instead of using only Wikipedia.
 
-#### Analysis of tweets from influential people - the power of communication during the pandemic
+#### Analysis of tweets from influential people - the power of communication during the pandemic.
 
-In this part of analysis, we are retrieving tweets posted by influential people in each country (politicians, influencers, public figures from music, sports, etc.). We adopted an approach similar to the one used for the previous task, translating each retrieved tweet to English in order to simplify our analysis. Since we are analysizng a limited number of users, in this part we can retrieve all tweets from the period of interest (3 weeks before lockdown). In order to label each tweet with a topic and emotions, we use empath library. Additionally, we perform a sentiment analysis of tweets using TextBlob library. We compute both a sentiment (polarity) score and a subjectivity value for each comment. We then try to quantify whether these tweets were meant to warn the population by looking at the most used words and hashtags. This last analysis might also be useful to understand the way communication has changed during the pandemic. Notice that some of the insights obtained at the end of this task are going to be considered as observed covariates for the following analysis.
+In this part of analysis retrieved tweets posted by influential people in each country (politicians, influencers, public figures from music, sports, etc.). We adopted an approach similar to the one used for the previous task, translating each retrieved tweet to English in order to simplify our analysis. Since we are analysizng a limited number of users, in this part we can retrieve all tweets from the period of interest (3 weeks before lockdown). In order to label each tweet with a topic and emotions, we use empath library. Additionally, we perform a sentiment analysis of tweets using TextBlob library. We compute both a sentiment (polarity) score and a subjectivity value for each comment. We then try to quantify whether these tweets were meant to warn the population by looking at the most used words and hashtags. This last analysis might also be useful to understand the way communication has changed during the pandemic. Finally, we used LDA in order to quantify how much covid realted tweets are important in different countries. By using LDA we try reconstruct the topic model (bag of words) that might have generated the tweets we retreived. Notice that some of the insights obtained at the end of this task are going to be considered as observed covariates for the following analysis.
 
-####  Causality among covid related topics on Wiki and Twitter and covid new cases/deaths
+####  Impact of "attention score" on infections.
 
-We want to explore whether an overall interest in COVID-19 had an impact on reducing/slowing the number of new cases and deaths in different countries. By overall interest, we mean the number of COVID-related pageviews on Wikipedia (which represent people's general interest in the pandemic) and Twitter data of influential people (which represent the presence of the virus in social media).
-
-We try to emulate a sort of observational study dividing each country in the following classes:
-- treated: countries that proved to pay attention to COVID in the early stage of the pandemic;
-- controlled: countries not showing particular interest in COVID-19. 
-
-The actual way to assign a class to each country is better described in the corresponding notebook.
-
-The causal graph below shows the main idea of our analysis:
-
-
-```mermaid
-graph LR
-B((GDP)) --> A((Propensity score))
-C((Area)) --> A
-D((Mobility)) --> A
-E((Lockdown)) --> A
-F((Population)) --> A
-A ---> G((Treatment))
-A --> H((Outcome))
-G -->H
-I((Unobserved covariates <br/>  - English Wikipedia <br/> - people's panic))--> G
-
-style A fill:#aaa,stroke:#555,stroke-width:2px
-style I fill:#9bb,stroke:#999,stroke-width:2px
-```
+In this part of analysis, we explored whether an overall interest in COVID-19 had an impact on reducing/slowing the number of new cases and deaths in different countries. To do so we computed a new variable that we called "attention score". To do so, we firstly utilize the LDA topic model of previous task to pick up the key topics talked about by influential people on Twitter. Thus, we can find the topic that is related to pandemics, covid, lockdown, and so on, and find the percentage of tokens related to it. This percentage is our score for the presence of COVID on social media. Next, we use the `aggregated_timeseries.json` dataset to get the average percentage of pageviews going to covid-related pages per day for pages in the appropriate language for the country we analyze.  
+Finally, we average these two results by Harmonic mean to obtain the Covid attention score. We use the Harmonic mean to evenly weight the influence of each of the percentage scores we use.
+After having computed the attention score for the 12 countries, we divided them in two categories: 6 countries were labeled as "low-attention" countries and the other 6 countries were labeled as "high-attention" countries.
+Then we divided our main dataframe in two dataframe based on low and high attention, obtaining 6 rows for each new dataframe. Then we decided to do an exact matching of these two dataset on the variable `had_lockdown` (1 if the country had a lockdown, 0 otherwise).  
+After this matching, we end up with 18 couples. Then we compute the "4ADA similarity score" defined by:  
+$$\text{4ADA-Similarity}(x_1, x_2) = 1 - \frac{1}{N}\sum_{x^i_1, x^i_2}{|x^i_1 - x^i_2|} $$
+where $x^i_j$, $j\in\{1, 2\}$ is the $i$-th feature of the $j$-th country in the pair.
+Then we built a graph containing all the 18 pairs we had so far where each edeges were weighted by the 4ADA-Similarity and we take the best matches possibile.
+For these matches, we computed a paired t-test on the new daily cases (through bootstrap) with a Bonferroni adjustment in order to see if there is statistical evidence to say that countries with an higher attention had lower infections (main research question). We kindly ask you to look at our datastory [here](https://4ada.github.io/4ada_datastory/) to discover the interesting results!
 
 #### Feasibility
 
-We have license for 60M tweets, which are around 70GB of data which will be split into 2 datasets (influential and normal people). This however is the maximum amount of data we can retrieve, but we strongly believe less tweets will be needed to draw useful insights.
-
-## Proposed timeline
-
-
-|Period                           |Milestones                              |
-|---------------------------------|----------------------------------------|
-|`November 21st - November 27th ` | Twitter data retrieval & answering RQ1 |
-|`November 28st - December 04th ` | Answering RQ2                          |
-|`December 05th - December 11th ` | Answering RQ3                          |
-|`December 12th - December 18th ` | Overall conslusion & Data story        |
-|`December 19th - December 23th ` | Final checks and revisions             |
+We obtained the license from Twitter for working with 60M tweets, which are around 70GB of data which were splitted into 2 datasets (influential and normal people). This however is the maximum amount of data we could retrieve, but we less tweets were needed to draw useful insights.
 
 
 ## Organization within the team
@@ -101,7 +74,9 @@ We have license for 60M tweets, which are around 70GB of data which will be spli
 |----------------------------|-----------------------------|
 |Wikipedia usage & tweets from *normal* daily users | R, F |
 |Tweets from influential people                     | M, R |
-|Causality Twitter/Wiki to new cases                | L, M, F |
+|Attention score analysis                           | L, F |
+|Website                                            | M, L |
+|Data story writing                                 | M, F, R, L |
 
 *M = Maja, F = Federico, L = Lazar, R = Riccardo
 
