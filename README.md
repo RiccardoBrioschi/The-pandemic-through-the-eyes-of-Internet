@@ -5,7 +5,6 @@ You can find our data story [here](https://4ada.github.io/4ada_datastory/), enjo
 * [Research questions](#Research-questions)
 * [Datasets](#Datasets)
 * [Methods](#Methods)
-* [Proposed timeline](#Proposed-timeline)
 * [Organization within the team](#Organization-within-the-team)
 * [Authors](#Authors)
 * [References](#References)
