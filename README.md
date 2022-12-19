@@ -1,6 +1,5 @@
 # Internet as tool to fight pandemics
-For the first time ever, we have a chance to explore what role the online world had during the pandemic. 
-
+You can find our data story [here](https://4ada.github.io/4ada_datastory/), enjoy!
 
 * [Abstract](#Abstract)
 * [Research questions](#Research-questions)
