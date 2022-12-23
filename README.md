@@ -23,7 +23,7 @@ To figure out how people's interests changed in response both to the disease its
 
 2) What was the behavior of influential people on Twitter during the pandemic, and how did their words impact people during that period, with particular attention to the early stage of the pandemic?
 
-3) Did countries with a higher presence of COVID-19 related topics in Wikipedia pagelogs and a higher presence of tweets about the virus, mostly from influential people, have a better situation in terms of new cases and the number of deaths, than countries that didn’t?
+3) Did high attention towards COVID-19 in the early stage of the pandemic help people fight it, or is it simply a sign that a bad situation existed in a country when the virus first started spreading?
 
 ## Datasets
 To answer those questions we used the following datasets:
