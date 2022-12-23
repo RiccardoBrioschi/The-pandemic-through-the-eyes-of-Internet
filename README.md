@@ -10,10 +10,10 @@ You can find our data story [here](https://4ada.github.io/4ada_datastory/), enjo
 * [References](#References)
 
 ## Abstract
-Due to the coronavirus pandemic, year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. 
+<p align="justify"> Due to the coronavirus pandemic, year 2020 was a year of big changes in the world. Because of reduced mobility during that period people started to live in an ‘online’ world, expressing their thoughts and opinions on social media like Twitter. Additionally, they used Wikipedia, the largest and most-read online encyclopedia, as the main source for investigating more about anything they would like to know. </p>
 
-Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis [[1]](#References), this project aims to analyse human digital traces and to understand how the pandemic has impacted human interests, with particular attention to how communication has been affected by the virus. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we will analyise tweets posted by influential people on the semantic level to see the power of communication during the pandemic. Finally, to wrap up the story, the main question of our research is:  
-“Were countries which paid more attention about COVID-19 in the early stage of the pandemic the ones that better handled the initial spread of the virus?”
+<p align="justify"> Starting from West et al.’s work about attention shifts on Wikipedia during the COVID-19 crisis [[1]](#References), this project aims to analyse human digital traces and to understand how the pandemic has impacted human interests, with particular attention to how communication has been affected by the virus. To reach this goal, we are analysing which topics people were interested in the most during the pandemic, both on Twitter and Wikipedia. Moreover, we will analyise tweets posted by influential people on the semantic level to see the power of communication during the pandemic. Finally, to wrap up the story, the main question of our research is:  
+“Were countries which paid more attention about COVID-19 in the early stage of the pandemic the ones that better handled the initial spread of the virus?” </p>
 
 ## Research questions
 
