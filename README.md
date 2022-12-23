@@ -19,24 +19,24 @@ Starting from West et al.’s work about attention shifts on Wikipedia during th
 
 To figure out how people's interests changed in response both to the disease itself and to the massive mobility restrictions during the pandemic, we ask the following questions:
 
-1) How people's interest in different topics on Wikipedia and Twitter changed in the early stage of the pandemic in different countries? Do tweets reflect the same changes in nature of information seeking as shown by Wikipedia pageview logs and if not, why?
+1) How did people's interests in different topics on Wikipedia and Twitter change in the early stage of the pandemic in different countries? Do tweets reflect the same changes in nature of information seeking as shown by Wikipedia pageview logs and if not, why?
 
-2) What was the behavior of influential people on Twitter during the pandemic, and how their words impacted people during that period, with particular attention to the early stage of the pandemic?
+2) What was the behavior of influential people on Twitter during the pandemic, and how did their words impact people during that period, with particular attention to the early stage of the pandemic?
 
-3) Did countries with a higher presence of covid related topics on Wikipedia and a higher presence of tweets about covid, mostly from influential people, have a better situation in terms of new cases and the number of deaths, than countries that didn’t?
+3) Did countries with a higher presence of COVID-19 related topics in Wikipedia pagelogs and a higher presence of tweets about the virus, mostly from influential people, have a better situation in terms of new cases and the number of deaths, than countries that didn’t?
 
 ## Datasets
 To answer those questions we used the following datasets:
-- `Global_Mobility_Report` (given to us): in this dataset all the metrics regarding mobility are collected.
+- `Global_Mobility_Report` (given to us): in this dataset all the information regarding mobility are collected.
 - `aggregated_timeseries` (given to us): here we find the date and the number of clicks on wikipedia pages of different topics (e.g. Covid, Geography, STEM, ...)
-- `interventions` (given to us): in this dataset we can find all the date of the most important events during the pandemics for some countries.  
-- `WHO-COVID-19-global-data`(added by us): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding in our analysis on how pandemics was going.
-- `Twitter data` (added by us): we collected tweets (both from influencing people and normal daily users) in different periods of the pandemic to get answers on mentioned RQs.
+- `interventions` (given to us): in this dataset we can find all the date of the most important events during the pandemic for some countries.  
+- `WHO-COVID-19-global-data`(added by us): dataset downloaded from the official website of World Health Organization [(here)](https://covid19.who.int/data). We have decided to add this dataset to have a better understanding of how the pandemic was going.
+- `Twitter data` (added by us): we collected tweets (both from influential people and normal daily users) in different periods of the pandemic to get answers on mentioned RQs.
 - `countries.csv` (added by us): dataset containing additional information about analysed countries, e.g. area, GDP, population etc.
 
 ## Methods
 
-In this section, we will give an overview of the preprocessing, processing, and the data analysis part which needs to be done to answer our RQs. Moreover, we will explain the problem-solving process as well as the feasibility of each task.
+In this section, we will give an overview of the preprocessing, processing, and the data analysis part that had to be done to answer our RQs. Moreover, we will explain the problem-solving process as well as the feasibility of each task.
 
 #### Analysis of Wikipedia usage and tweets from *normal* daily users. 
 
